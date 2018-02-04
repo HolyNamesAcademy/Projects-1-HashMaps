@@ -9,13 +9,22 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
         this.employees = new ArrayList<>();
     }
 
-
     public void addEmployee(Employee employee) {
-        // TODO: don't add if already exists or replace?
         this.employees.add(employee);
     }
 
-    public Employee findEmployee(String contactName) {
+    public boolean addOrReplaceEmployee(Employee employee) {
+        Employee currentEntry = this.findEmployeeByName(employee.getName());
+        if (currentEntry == null) {
+            this.addEmployee(employee);
+            return false;
+        } else {
+            // set things
+            return true;
+        }
+    }
+
+    public Employee findEmployeeByName(String contactName) {
         for (Employee employee : this.employees) {
             if (employee.getName().equalsIgnoreCase(contactName)) {
                 return employee;
@@ -25,7 +34,7 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
         return null;
     }
 
-    public Employee findEmployeeWithOffice(String buildingName, int officeNumber) {
+    public Employee findEmployeeByOffice(String buildingName, int officeNumber) {
         for (Employee employee : this.employees) {
             if (employee.getBuildingName().equalsIgnoreCase(buildingName) && employee.getOfficeNumber() == officeNumber) {
                 return employee;
@@ -35,7 +44,7 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
         return null;
     }
 
-    public ArrayList<Employee> getEmployees() {
+    public ArrayList<Employee> getAllEmployees() {
         return this.employees;
     }
 }
