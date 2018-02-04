@@ -1,16 +1,22 @@
-import java.util.HashMap;
+package main;
 
-public class CompanyDirectoryHashMap implements ICompanyDirectory {
-    private HashMap<String, Employee> employees;
+import java.util.ArrayList;
+
+public class CompanyDirectoryArrayList implements ICompanyDirectory {
+    private ArrayList<Employee> employees;
+
+    public CompanyDirectoryArrayList() {
+        this.employees = new ArrayList<>();
+    }
+
 
     public void addEmployee(Employee employee) {
         // TODO: don't add if already exists or replace?
-        this.employees.put(employee.getName(), employee);
+        this.employees.add(employee);
     }
 
     public Employee findEmployee(String contactName) {
-        for (String employeeName: this.employees.keySet()) {
-            Employee employee = this.employees.get(employeeName);
+        for (Employee employee : this.employees) {
             if (employee.getName().equalsIgnoreCase(contactName)) {
                 return employee;
             }
@@ -20,8 +26,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
     }
 
     public Employee findEmployeeWithOffice(String buildingName, int officeNumber) {
-        for (String employeeName: this.employees.keySet()) {
-            Employee employee = this.employees.get(employeeName);
+        for (Employee employee : this.employees) {
             if (employee.getBuildingName().equalsIgnoreCase(buildingName) && employee.getOfficeNumber() == officeNumber) {
                 return employee;
             }
@@ -30,7 +35,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
         return null;
     }
 
-    public HashMap<String, Employee> getEmployees() {
+    public ArrayList<Employee> getEmployees() {
         return this.employees;
     }
 }

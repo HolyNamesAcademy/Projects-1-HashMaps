@@ -1,3 +1,4 @@
+package main;
 
 public class Employee {
     private String name;
