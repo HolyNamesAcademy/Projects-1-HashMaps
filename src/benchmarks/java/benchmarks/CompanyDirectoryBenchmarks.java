@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Warmup(iterations = 3)
 @Measurement(iterations = 5)
-public class CompanyDirectoryBenchMarks {
+public class CompanyDirectoryBenchmarks {
 
     @State(Scope.Thread)
     public static class MyState {
