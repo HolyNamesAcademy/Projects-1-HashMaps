@@ -10,35 +10,23 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
     }
 
     public void addEmployee(Employee employee) {
-        this.employees.put(employee.getName(), employee);
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public boolean addOrReplaceEmployee(Employee employee) {
-        Employee employeeInDirectory = this.findEmployeeByName(employee.getName());
-        this.addEmployee(employee);
-        return employeeInDirectory == null;
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public Employee findEmployeeByName(String contactName) {
-        for (String employeeName: this.employees.keySet()) {
-            Employee employee = this.employees.get(employeeName);
-            if (employee.getName().equalsIgnoreCase(contactName)) {
-                return employee;
-            }
-        }
-
-        return null;
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public Employee findEmployeeByOffice(String buildingName, int officeNumber) {
-        for (String employeeName: this.employees.keySet()) {
-            Employee employee = this.employees.get(employeeName);
-            if (employee.getBuildingName().equalsIgnoreCase(buildingName) && employee.getOfficeNumber() == officeNumber) {
-                return employee;
-            }
-        }
-
-        return null;
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public HashMap<String, Employee> getAllEmployees() {

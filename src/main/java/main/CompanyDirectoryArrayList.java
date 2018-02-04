@@ -10,38 +10,23 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
     }
 
     public void addEmployee(Employee employee) {
-        this.employees.add(employee);
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public boolean addOrReplaceEmployee(Employee employee) {
-        Employee currentEntry = this.findEmployeeByName(employee.getName());
-        if (currentEntry == null) {
-            this.addEmployee(employee);
-            return false;
-        } else {
-            // set things
-            return true;
-        }
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public Employee findEmployeeByName(String contactName) {
-        for (Employee employee : this.employees) {
-            if (employee.getName().equalsIgnoreCase(contactName)) {
-                return employee;
-            }
-        }
-
-        return null;
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public Employee findEmployeeByOffice(String buildingName, int officeNumber) {
-        for (Employee employee : this.employees) {
-            if (employee.getBuildingName().equalsIgnoreCase(buildingName) && employee.getOfficeNumber() == officeNumber) {
-                return employee;
-            }
-        }
-
-        return null;
+        // TODO: implement this
+        throw new UnsupportedOperationException();
     }
 
     public ArrayList<Employee> getAllEmployees() {
