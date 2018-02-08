@@ -22,4 +22,13 @@ public class Employee {
     public int getOfficeNumber() {
         return this.officeNumber;
     }
+
+    public String toString() {
+        return String.format(
+                "Name = '%s', Building = '%s', Office Number = '%d'",
+                this.name,
+                this.buildingName,
+                this.officeNumber);
+    }
+
 }
