@@ -29,6 +29,11 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
         throw new UnsupportedOperationException();
     }
 
+    public void DisplayAllEmployees() {
+        // TODO: implement this
+        throw new UnsupportedOperationException();
+    }
+
     public HashMap<String, Employee> getAllEmployees() {
         return this.employees;
     }

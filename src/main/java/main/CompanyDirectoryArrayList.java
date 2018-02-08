@@ -29,6 +29,11 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
         throw new UnsupportedOperationException();
     }
 
+    public void DisplayAllEmployees() {
+        // TODO: implement this
+        throw new UnsupportedOperationException();
+    }
+
     public ArrayList<Employee> getAllEmployees() {
         return this.employees;
     }

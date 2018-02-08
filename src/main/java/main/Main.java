@@ -6,26 +6,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Choose an implementation (\"ArrayList\" or \"HashMap\"): ");
-        String implementation = getNextInput(in);
-        ICompanyDirectory directory;
-        if (implementation.equalsIgnoreCase("ArrayList")) {
-            directory = new CompanyDirectoryArrayList();
-        } else if (implementation.equalsIgnoreCase("HashMap")) {
-            directory = new CompanyDirectoryHashMap();
-        } else {
-            return;
-        }
-
-        String commandString = null;
+        ICompanyDirectory directory = null;
         do {
-            System.out.println("(q) Quit");
-            System.out.println("(a) Add employee");
+            System.out.print("Choose an implementation (\"ArrayList\" or \"HashMap\"): ");
+            String implementation = getNextInput(in);
+            if (implementation.equalsIgnoreCase("ArrayList")) {
+                directory = new CompanyDirectoryArrayList();
+            } else if (implementation.equalsIgnoreCase("HashMap")) {
+                directory = new CompanyDirectoryHashMap();
+            } else {
+                String message = String.format("Unrecognized option '%s'", implementation);
+                Log(LogLevel.WARNING, message);
+            }
+        } while(directory == null);
+
+        String commandString;
+        do {
+            System.out.println("(q)  Quit");
+            System.out.println("(a)  Add employee");
             System.out.println("(fn) Find Employee by Name");
             System.out.println("(fo) Find Employee by Office");
+            System.out.println("(d)  Display all employees");
             System.out.print("Choose an option: ");
 
-            commandString = getNextInput(in);
+            commandString = getNextInput(in).toLowerCase();
 
             switch (commandString) {
                 case "q":
@@ -38,6 +42,9 @@ public class Main {
                     break;
                 case "fo":
                     FindEmployeeByOffice(directory, in);
+                    break;
+                case "d":
+                    directory.DisplayAllEmployees();
                     break;
                 default:
                     String message = String.format(
