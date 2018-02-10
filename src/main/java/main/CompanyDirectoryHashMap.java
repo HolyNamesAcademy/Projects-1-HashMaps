@@ -18,11 +18,6 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
         throw new UnsupportedOperationException("CompanyDirectoryHashMap.addEmployee() has not been implemented yet");
     }
 
-    public boolean addOrReplaceEmployee(Employee employee) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryHashMap.addOrReplaceEmployee() has not been implemented yet");
-    }
-
     /**
      * Find an employee in the directory with a given name.
      * @param employeeName the name of the employee to find

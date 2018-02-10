@@ -103,7 +103,6 @@ public class CompanyDirectoryBenchmarks {
         state.directoryHashMap.findEmployeeByOffice(employee.getBuildingName(), employee.getOfficeNumber());
     }
 
-
     // TODO: other potential benchmarks
     // find employee by name, not in directory
     // find employee at beginning

@@ -12,13 +12,6 @@ public interface ICompanyDirectory {
     void addEmployee(Employee employee);
 
     /**
-     * Add an employee...
-     * @param employee
-     * @return true if the employee was already in the directory, false otherwise
-     */
-    boolean addOrReplaceEmployee(Employee employee);
-
-    /**
      * Find an employee in the directory with a given name.
      * @param employeeName the name of the employee to find
      * @return the employee in the directory with the given name, null if no employee with that name exists

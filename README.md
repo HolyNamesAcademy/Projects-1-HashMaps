@@ -90,7 +90,6 @@ You'll need to implement the following functions in both classes:
 | Function                              | Description  |
 | ------------------------------------- | ------------ |
 | `void addEmployee(Employee employee)` | Adds a new employee to the directory. |
-| `boolean addOrReplaceEmployee(Employee employee)` | If an employee with a given name is already in the directory, replace that entry with the new information. Otherwise, add it as a new employee. |
 | `Employee findEmployeeByName(String contactName)` | Finds an existing employee in the directory by their name. |
 | `Employee findEmployeeByOffice(String buildingName, int officeNumber)` | Finds an existing employee in the directory by their office. |
 | `void DisplayAllEmployees()` | Prints information about all employees. |
@@ -178,7 +177,7 @@ to run our benchmarks and get results.
 ### TODO
 
   * save employees to file?
-  * Implement additional benchmark for addOrReplaceEmployee?
+  * Implement additional benchmark?
 
 ## Turning in the project
 
