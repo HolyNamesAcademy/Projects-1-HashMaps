@@ -42,9 +42,9 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
     /**
      * Print information about all employees to the console.
      */
-    public void DisplayAllEmployees() {
+    public void displayAllEmployees() {
         // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryHashMap.DisplayAllEmployees() has not been implemented yet");
+        throw new UnsupportedOperationException("CompanyDirectoryHashMap.displayAllEmployees() has not been implemented yet");
     }
 
     public HashMap<String, Employee> getAllEmployees() {

@@ -29,5 +29,5 @@ public interface ICompanyDirectory {
     /**
      * Print information about all employees to the console.
      */
-    void DisplayAllEmployees();
+    void displayAllEmployees();
 }

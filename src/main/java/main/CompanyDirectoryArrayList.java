@@ -42,9 +42,9 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
     /**
      * Print information about all employees to the console.
      */
-    public void DisplayAllEmployees() {
+    public void displayAllEmployees() {
         // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryArrayList.DisplayAllEmployees() has not been implemented yet");
+        throw new UnsupportedOperationException("CompanyDirectoryArrayList.displayAllEmployees() has not been implemented yet");
     }
 
     public ArrayList<Employee> getAllEmployees() {

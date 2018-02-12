@@ -44,7 +44,7 @@ public class Main {
                     FindEmployeeByOffice(directory, in);
                     break;
                 case "d":
-                    directory.DisplayAllEmployees();
+                    directory.displayAllEmployees();
                     break;
                 default:
                     String message = String.format(
