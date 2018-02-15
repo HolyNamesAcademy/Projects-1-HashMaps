@@ -1,7 +1,12 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="CompanyDirectoryHashMapTests" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-    <module name="Project6-AddressBook" />
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <pattern>
+        <option name="PATTERN" value="test.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <module name="Project6-CompanyDirectory" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <option name="PACKAGE_NAME" value="test" />

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="CompanyDirectoryBenchmarks" type="jmh-id" factoryName="Jmh" program-parameters="benchmarks.CompanyDirectoryBenchmarks.*" working-dir="C:\Users\brian\dev\hna\Project6-AddressBook" benchmark-type="CLASS" benchmark-class="benchmarks.CompanyDirectoryBenchmarks">
-    <module name="Project6-AddressBook" />
+  <configuration default="false" name="CompanyDirectoryBenchmarks" type="jmh-id" factoryName="Jmh" program-parameters="benchmarks.CompanyDirectoryBenchmarks.*" working-dir="%MODULE_WORKING_DIR%" benchmark-type="CLASS" benchmark-class="benchmarks.CompanyDirectoryBenchmarks">
+    <module name="Project6-CompanyDirectory" />
     <method />
   </configuration>
 </component>
