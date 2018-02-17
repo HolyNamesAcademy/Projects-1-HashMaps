@@ -40,9 +40,10 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
     }
 
     /**
-     * Print information about all employees to the console.
+     * Get information about all employees. Each employee's information should be on its own line.
+     * @return a String representing information about each employee in the directory.
      */
-    public void displayAllEmployees() {
+    public String displayAllEmployees() {
         // TODO: implement this
         throw new UnsupportedOperationException("CompanyDirectoryArrayList.displayAllEmployees() has not been implemented yet");
     }

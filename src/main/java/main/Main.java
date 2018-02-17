@@ -44,7 +44,7 @@ public class Main {
                     FindEmployeeByOffice(directory, in);
                     break;
                 case "d":
-                    directory.displayAllEmployees();
+                    System.out.println(directory.displayAllEmployees());
                     break;
                 default:
                     String message = String.format(
@@ -88,7 +88,8 @@ public class Main {
 
         Employee found = directory.findEmployeeByOffice(buildingName, officeNumber);
         if (found == null) {
-            String message = String.format("No employee found with name '%s'", buildingName);
+            String message = String.format(
+                    "No employee found with building '%s' and office number %d", buildingName, officeNumber);
             Log(LogLevel.WARNING, message);
         } else {
             String message = "Found employee: " + found.toString();

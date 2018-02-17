@@ -27,7 +27,8 @@ public interface ICompanyDirectory {
     Employee findEmployeeByOffice(String buildingName, int officeNumber);
 
     /**
-     * Print information about all employees to the console.
+     * Get information about all employees. Each employee's information should be on its own line.
+     * @return a String representing information about each employee in the directory.
      */
-    void displayAllEmployees();
+    String displayAllEmployees();
 }
