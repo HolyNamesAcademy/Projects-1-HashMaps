@@ -10,7 +10,7 @@ public class CompanyDirectoryArrayListTests {
 
     // Test that you can successfully add a new employee to the directory.
     @Test
-    public void addContact() throws Exception {
+    public void addEmployee() throws Exception {
         // TODO: implement this
         throw new UnsupportedOperationException();
     }
