@@ -11,8 +11,13 @@ public class CompanyDirectoryArrayListTests {
     // Test that you can successfully add a new employee to the directory.
     @Test
     public void addEmployee() throws Exception {
-        // TODO: implement this
-        throw new UnsupportedOperationException();
+        String expectedEmployeeName = "Paul McCartney";
+        Employee expectedEmployee = new Employee(expectedEmployeeName, "Abbey Road", 1969);
+        CompanyDirectoryArrayList directory = new CompanyDirectoryArrayList();
+        directory.addEmployee(expectedEmployee);
+
+        Employee actualEmployee = directory.getAllEmployees().get(0);
+        assertEquals(expectedEmployee, actualEmployee);
     }
 
     // Add a new employee to the directory and find that employee by their name.
