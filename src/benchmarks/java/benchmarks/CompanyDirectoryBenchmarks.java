@@ -19,6 +19,9 @@ public class CompanyDirectoryBenchmarks {
     public static class MyState {
         public CompanyDirectoryHashMap directoryHashMap;
         public CompanyDirectoryArrayList directoryArrayList;
+        public String employeeToFindName = "Aretha Franklin";
+        public String employeeToFindBuildingName = "Muscle Shoals";
+        public int employeeToFindOfficeNumber = 100;
 
         private static final int InitialNumberOfEmployees = 10000;
 
@@ -36,6 +39,12 @@ public class CompanyDirectoryBenchmarks {
                 this.directoryArrayList.addEmployee(employee);
                 this.directoryHashMap.addEmployee(employee);
             }
+
+            // Add a specific employee for later, so we can use it for the "find" benchmarks
+            Employee employee = new Employee(
+                    this.employeeToFindName, this.employeeToFindBuildingName, this.employeeToFindOfficeNumber);
+            this.directoryArrayList.addEmployee(employee);
+            this.directoryHashMap.addEmployee(employee);
         }
     }
 
@@ -64,10 +73,7 @@ public class CompanyDirectoryBenchmarks {
      */
     @Benchmark
     public void FindEmployeeArrayList(MyState state) {
-        String name = "Aretha Franklin";
-        Employee employee = new Employee(name, "Muscle Shoals", 75);
-        state.directoryArrayList.addEmployee(employee);
-        state.directoryArrayList.findEmployeeByName(name);
+        state.directoryArrayList.findEmployeeByName(state.employeeToFindName);
     }
 
     /*
@@ -75,10 +81,7 @@ public class CompanyDirectoryBenchmarks {
      */
     @Benchmark
     public void FindEmployeeHashMap(MyState state) {
-        String name = "Aretha Franklin";
-        Employee employee = new Employee(name, "Muscle Shoals", 75);
-        state.directoryHashMap.addEmployee(employee);
-        state.directoryHashMap.findEmployeeByName(name);
+        state.directoryHashMap.findEmployeeByName(state.employeeToFindName);
     }
 
     /*
@@ -86,10 +89,7 @@ public class CompanyDirectoryBenchmarks {
      */
     @Benchmark
     public void FindEmployeeByOfficeArrayList(MyState state) {
-        String name = "Aretha Franklin";
-        Employee employee = new Employee(name, "Muscle Shoals", 75);
-        state.directoryArrayList.addEmployee(employee);
-        state.directoryArrayList.findEmployeeByOffice(employee.getBuildingName(), employee.getOfficeNumber());
+        state.directoryArrayList.findEmployeeByOffice(state.employeeToFindBuildingName, state.employeeToFindOfficeNumber);
     }
 
     /*
@@ -97,9 +97,6 @@ public class CompanyDirectoryBenchmarks {
      */
     @Benchmark
     public void FindEmployeeByOfficeHashMap(MyState state) {
-        String name = "Aretha Franklin";
-        Employee employee = new Employee(name, "Muscle Shoals", 75);
-        state.directoryHashMap.addEmployee(employee);
-        state.directoryHashMap.findEmployeeByOffice(employee.getBuildingName(), employee.getOfficeNumber());
+        state.directoryHashMap.findEmployeeByOffice(state.employeeToFindBuildingName, state.employeeToFindOfficeNumber);
     }
 }
