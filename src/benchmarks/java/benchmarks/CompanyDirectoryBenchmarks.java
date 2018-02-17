@@ -52,51 +52,53 @@ public class CompanyDirectoryBenchmarks {
      * Add a new employee to an ArrayList-based directory.
      */
     @Benchmark
-    public void AddEmployeeHashMap(MyState state) {
+    public String AddEmployeeHashMap(MyState state) {
         String name = UUID.randomUUID().toString();
         Employee employee = new Employee(name, "building", 100);
         state.directoryHashMap.addEmployee(employee);
+        return name;
     }
 
     /*
      * Add a new employee to a HashMap-based directory.
      */
     @Benchmark
-    public void AddEmployeeArrayList(MyState state) {
+    public String AddEmployeeArrayList(MyState state) {
         String name = UUID.randomUUID().toString();
         Employee employee = new Employee(name, "building", 100);
         state.directoryArrayList.addEmployee(employee);
+        return name;
     }
 
     /*
      * Add a new employee to the end of an ArrayList-based directory and find them by their name.
      */
     @Benchmark
-    public void FindEmployeeArrayList(MyState state) {
-        state.directoryArrayList.findEmployeeByName(state.employeeToFindName);
+    public Employee FindEmployeeArrayList(MyState state) {
+        return state.directoryArrayList.findEmployeeByName(state.employeeToFindName);
     }
 
     /*
      * Add a new employee to a HashMap-based directory and find them by their name.
      */
     @Benchmark
-    public void FindEmployeeHashMap(MyState state) {
-        state.directoryHashMap.findEmployeeByName(state.employeeToFindName);
+    public Employee FindEmployeeHashMap(MyState state) {
+        return state.directoryHashMap.findEmployeeByName(state.employeeToFindName);
     }
 
     /*
      * Add a new employee to the end of the ArrayList-based directory and find them by their office.
      */
     @Benchmark
-    public void FindEmployeeByOfficeArrayList(MyState state) {
-        state.directoryArrayList.findEmployeeByOffice(state.employeeToFindBuildingName, state.employeeToFindOfficeNumber);
+    public Employee FindEmployeeByOfficeArrayList(MyState state) {
+        return state.directoryArrayList.findEmployeeByOffice(state.employeeToFindBuildingName, state.employeeToFindOfficeNumber);
     }
 
     /*
      * Add a new employee to the HashMap-based directory and find them by their office.
      */
     @Benchmark
-    public void FindEmployeeByOfficeHashMap(MyState state) {
-        state.directoryHashMap.findEmployeeByOffice(state.employeeToFindBuildingName, state.employeeToFindOfficeNumber);
+    public Employee FindEmployeeByOfficeHashMap(MyState state) {
+        return state.directoryHashMap.findEmployeeByOffice(state.employeeToFindBuildingName, state.employeeToFindOfficeNumber);
     }
 }
