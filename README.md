@@ -215,8 +215,8 @@ TODO TODO
 | `findEmployeeByName()`                                    | 5 pts |
 | `findEmployeeByOffice()`                                  | 5 pts |
 | `displayAllEmployees()`                                   | 5 pts |
-| <h3>CompanyDirectoryArrayList tests (5 pts per test)</h3> | <h3>20 pts</h3> |
-| <h3>CompanyDirectoryHashMap tests (5 pts per test)</h3>   | <h3>20 pts</h3> |
+| <h3>CompanyDirectoryArrayList test</h3>                   | <h3>5 pts</h3> |
+| <h3>CompanyDirectoryHashMap test</h3>                     | <h3>5 pts</h3> |
 | <h3>Benchmark Report</h3>                                 | <h3>10 pts</h3> |
 | <h3>Code Quality</h3>                                     | <h3>20 pts</h3> |
 | No compile errors                                         | 10 pts |
@@ -229,7 +229,7 @@ TODO TODO
 | Write employee information to a file                      | 5 pts |
 | Read employee information from a file                     | 5 pts |
 | Implement an additional benchmark                         | 5 pts |
-| <h3>Total</h3> (not including extra credit)               | <h3>130 pts</h3> |
+| <h3>Total</h3> (not including extra credit)               | <h3>100 pts</h3> |
 
 [Code spaced and indented properly]: https://stackoverflow.com/questions/17879475/how-enable-auto-format-code-for-intellij-idea
 [Descriptive variable names]: http://www.makinggoodsoftware.com/2009/05/04/71-tips-for-naming-variables
