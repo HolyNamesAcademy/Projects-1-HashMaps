@@ -31,4 +31,14 @@ public interface ICompanyDirectory {
      * @return a String representing information about each employee in the directory.
      */
     String displayAllEmployees();
+
+    /**
+     * (EXTRA CREDIT) Updates an employee's office location.
+     * @param employeeName The name of the employee to update.
+     * @param buildingName The new building name where the employee works.
+     * @param officeNumber The new office number in the building where the employee works.
+     * @return True if the employee exists and their information was updated;
+     *         False if the employee is already at the building and office specified, or if no employee with that name exists
+     */
+    boolean updateEmployeeOffice(String employeeName, String buildingName, int officeNumber);
 }

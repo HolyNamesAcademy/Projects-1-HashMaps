@@ -51,4 +51,10 @@ public class CompanyDirectoryHashMapTests {
         // TODO: implement this
         throw new UnsupportedOperationException("Test not yet implemented.");
     }
+
+    // EXTRA CREDIT: Check that you can correctly update the office location for an employee in the directory.
+    @Test
+    public void updateOfficeForEmployeeThatExists() throws Exception {
+        // TODO: implement this if you are completing the corresponding extra credit
+    }
 }

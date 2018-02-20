@@ -179,6 +179,12 @@ There is a file in the project – `Benchmarks-Report.md` – where you should p
 
 ## Extra Credit
 
+### Update Employee Office
+
+There is an additional function `updateEmployeeOffice` that you can implement for a company directory.
+When implemented, it should allow you to change the office location for an employee already in the directory.
+Do this for both the ArrayList and HashMap directories and complete the corresponding tests.
+
 ### Read and Write Employee Information to a File
 
 As mentioned previously, employee information is not persisted when the program stops running.
@@ -226,6 +232,7 @@ TODO TODO
 | Correctly pushed to GitHub                                | 5 pts |
 | Turned in on time                                         | 15 pts |
 | <h3>Extra Credit</h3>                                     | <h3>15 pts</h3> |
+| Update employee office location                           | 10 pts |
 | Write employee information to a file                      | 5 pts |
 | Read employee information from a file                     | 5 pts |
 | Implement an additional benchmark                         | 5 pts |
