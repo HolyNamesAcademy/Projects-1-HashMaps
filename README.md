@@ -160,7 +160,8 @@ WorseThanAwesomeFunction     avgt   25  839.522 ± 39.274  us/op
 Once you've written your application code and have ensured it works by writing unit tests, we are ready
 to run our benchmarks and get results.
 
-There is a file in the project – `Benchmarks-Report.md` – where you should put your results.
+We have put a new page for this report in your OneNote in a page called "Project 6: Benchmarks Report";
+you should put your hypotheses and results here.
 
   1. Before running the benchmarks, consider how the same operations in `CompanyDirectoryArrayList` and
      `CompanyDirectoryHashMap` might compare. Based on what you know about how ArrayLists and HashMaps
