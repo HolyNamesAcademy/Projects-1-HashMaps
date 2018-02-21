@@ -14,8 +14,7 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
      * @param employee the employee to add to the directory
      */
     public void addEmployee(Employee employee) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryArrayList.addEmployee() has not been implemented yet");
+        this.employees.add(employee);
     }
 
     /**
@@ -24,8 +23,14 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
      * @return the employee in the directory with the given name, null if no employee with that name exists
      */
     public Employee findEmployeeByName(String employeeName) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryArrayList.findEmployeeByName() has not been implemented yet");
+        for (int i = 0; i < this.employees.size(); i++) {
+            Employee currentEmployee = this.employees.get(i);
+            if (currentEmployee.getName().equals(employeeName)) {
+                return currentEmployee;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -35,8 +40,14 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
      * @return the employee in the directory with the given office, null if no employee with that office exists
      */
     public Employee findEmployeeByOffice(String buildingName, int officeNumber) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryArrayList.findEmployeeByOffice() has not been implemented yet");
+        for (int i = 0; i < this.employees.size(); i++) {
+            Employee currentEmployee = this.employees.get(i);
+            if (currentEmployee.getBuildingName().equals(buildingName) && currentEmployee.getOfficeNumber() == officeNumber) {
+                return currentEmployee;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -44,8 +55,12 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
      * @return a String representing information about each employee in the directory.
      */
     public String displayAllEmployees() {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryArrayList.displayAllEmployees() has not been implemented yet");
+        String result = "";
+        for (int i = 0; i < this.employees.size(); i++) {
+            result += this.employees.get(i).toString() + System.lineSeparator();
+        }
+
+        return result;
     }
 
     /**

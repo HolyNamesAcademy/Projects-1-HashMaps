@@ -48,8 +48,11 @@ public class CompanyDirectoryArrayListTests {
     // Find an employee that is not in the directory by their name.
     @Test
     public void findEmployeeThatDoesNotExistByName() throws Exception {
-        // TODO: implement this
-        throw new UnsupportedOperationException("Test not yet implemented.");
+        CompanyDirectoryArrayList directory = new CompanyDirectoryArrayList();
+        String expectedEmployeeName = "Paul McCartney";
+
+        Employee actualEmployee = directory.findEmployeeByName(expectedEmployeeName);
+        assertNull(actualEmployee);
     }
     
     // EXTRA CREDIT: Check that you can correctly update the office location for an employee in the directory.

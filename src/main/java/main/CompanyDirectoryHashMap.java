@@ -14,8 +14,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
      * @param employee the employee to add to the directory
      */
     public void addEmployee(Employee employee) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryHashMap.addEmployee() has not been implemented yet");
+        this.employees.put(employee.getName(), employee);
     }
 
     /**
@@ -24,8 +23,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
      * @return the employee in the directory with the given name, null if no employee with that name exists
      */
     public Employee findEmployeeByName(String employeeName) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryHashMap.findEmployeeByName() has not been implemented yet");
+        return this.employees.get(employeeName);
     }
 
     /**
@@ -35,8 +33,14 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
      * @return the employee in the directory with the given office, null if no employee with that office exists
      */
     public Employee findEmployeeByOffice(String buildingName, int officeNumber) {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryHashMap.findEmployeeByOffice() has not been implemented yet");
+        for (String name : this.employees.keySet()) {
+            Employee currentEmployee = this.employees.get(name);
+            if (currentEmployee.getBuildingName().equals(buildingName) && currentEmployee.getOfficeNumber() == officeNumber) {
+                return currentEmployee;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -44,8 +48,12 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
      * @return a String representing information about each employee in the directory.
      */
     public String displayAllEmployees() {
-        // TODO: implement this
-        throw new UnsupportedOperationException("CompanyDirectoryHashMap.displayAllEmployees() has not been implemented yet");
+        String result = "";
+        for (String name : this.employees.keySet()) {
+            result += this.employees.get(name).toString() + System.lineSeparator();
+        }
+
+        return result;
     }
 
     /**
