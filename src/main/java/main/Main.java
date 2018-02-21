@@ -22,6 +22,7 @@ public class Main {
 
         String commandString;
         do {
+            System.out.println("");
             System.out.println("(q)  Quit");
             System.out.println("(a)  Add employee");
             System.out.println("(fn) Find Employee by Name");
@@ -30,6 +31,7 @@ public class Main {
             System.out.print("Choose an option: ");
 
             commandString = getNextInput(in).toLowerCase();
+            System.out.println("");
 
             switch (commandString) {
                 case "q":
