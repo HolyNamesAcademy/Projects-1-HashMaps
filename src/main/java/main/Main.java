@@ -20,6 +20,10 @@ public class Main {
             }
         } while(directory == null);
 
+        System.out.println("We'll start by adding some employees into the directory for you.");
+        System.out.println("Use the 'd' option to see the employees we added.");
+        AddDefaultEmployees(directory);
+
         String commandString;
         do {
             System.out.println("");
@@ -111,5 +115,16 @@ public class Main {
 
     private static String getNextInput(Scanner in) {
         return in.nextLine().trim();
+    }
+
+    private static void AddDefaultEmployees(ICompanyDirectory directory) {
+        directory.addEmployee(new Employee("Serena Williams", "Arthur Ashe Stadium", 101));
+        directory.addEmployee(new Employee("Derek Jeter", "Yankee Stadium", 2));
+        directory.addEmployee(new Employee("LeBron James", "Staples Center", 23));
+        directory.addEmployee(new Employee("Alex Morgan", "Staples Center", 13));
+        directory.addEmployee(new Employee("Aretha Franklin", "Muscle Shoals", 50));
+        directory.addEmployee(new Employee("Jimi Hendrix", "Red House", 67));
+        directory.addEmployee(new Employee("Paul McCartney", "Abbey Road Studios", 1942));
+        directory.addEmployee(new Employee("Patti Smith", "CBGB", 73));
     }
 }
