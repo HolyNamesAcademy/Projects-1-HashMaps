@@ -1,8 +1,8 @@
-# Hash Maps
+# Project: Hash Maps
 
 ## Table of Contents
 
-- [Hash Maps](#hash-maps)
+- [Project: Hash Maps](#project-hash-maps)
   - [Table of Contents](#table-of-contents)
   - [Good work pledge](#good-work-pledge)
   - [Getting started](#getting-started)
