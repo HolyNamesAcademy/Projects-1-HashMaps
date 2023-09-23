@@ -1,17 +1,29 @@
-# Project 6: Hash Maps
+# Hash Maps
 
 ## Table of Contents
 
-* [Good work pledge](#good-work-pledge)
-* [Getting started](#getting-started)
-* [Project overview](#project-overview)
-* [Program contents](#program-contents)
-  * [Application classes](#application-classes)
-  * [Test classes](#test-classes)
-  * [Benchmarking](#benchmarking)
-* [Extra credit](#extra-credit)
-* [Turning in the project](#turning-in-the-project)
-* [Grading rubric](#grading-rubric)
+- [Hash Maps](#hash-maps)
+  - [Table of Contents](#table-of-contents)
+  - [Good work pledge](#good-work-pledge)
+  - [Getting started](#getting-started)
+  - [Project overview](#project-overview)
+  - [Program contents](#program-contents)
+    - [Application classes](#application-classes)
+      - [Employee](#employee)
+      - [CompanyDirectoryArrayList and CompanyDirectoryHashMap](#companydirectoryarraylist-and-companydirectoryhashmap)
+      - [Main](#main)
+    - [Test classes](#test-classes)
+    - [Benchmarking](#benchmarking)
+      - [What is Benchmarking?](#what-is-benchmarking)
+      - [Running Benchmarks](#running-benchmarks)
+      - [Understanding Benchmark Results](#understanding-benchmark-results)
+      - [Report](#report)
+  - [Extra Credit](#extra-credit)
+    - [Update Employee Office](#update-employee-office)
+    - [Read and Write Employee Information to a File](#read-and-write-employee-information-to-a-file)
+    - [Implement an Additional Benchmark](#implement-an-additional-benchmark)
+  - [Turning in the project](#turning-in-the-project)
+  - [Grading rubric](#grading-rubric)
 
 ## Good work pledge
 
