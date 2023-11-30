@@ -36,10 +36,18 @@ public class CompanyDirectoryHashMapTests {
     @Test
     public void findEmployeeByOffice() throws Exception {
         CompanyDirectoryHashMap directory = new CompanyDirectoryHashMap();
+
         String expectedBuildingName = "Red House";
         int expectedOfficeNumber = 1967;
+
+        directory.addEmployee(new Employee("Other Name 1", "Other Building Name 1", expectedOfficeNumber));
+        directory.addEmployee(new Employee("Other Name 2", expectedBuildingName, 2000));
+
         Employee expectedEmployee = new Employee("Jimi Hendrix", expectedBuildingName, expectedOfficeNumber);
         directory.addEmployee(expectedEmployee);
+
+        directory.addEmployee(new Employee("Other Name 3", "Other Building Name 2", expectedOfficeNumber));
+        directory.addEmployee(new Employee("Other Name 4", expectedBuildingName, 2001));
 
         Employee actualEmployee = directory.findEmployeeByOffice(expectedBuildingName, expectedOfficeNumber);
         assertEquals(expectedEmployee, actualEmployee);
