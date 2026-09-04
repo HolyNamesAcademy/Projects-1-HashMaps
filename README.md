@@ -40,18 +40,13 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
 
 ## Getting started
 
-1. Go to the provided assignment link, and click accept. It should take you to your project page.
-   (If it doesn't, click on the link above again, and click on the link to the project page).
-2. On the GitHub project page, click on the green "Clone or Download" button and copy the link.
-3. Open IntelliJ, click on the "Checkout from Version Control" drop down and select "GitHub"
-4. On the next page paste the link you copied into the "Git Repository URL" box.
-5. Click Clone. You may have to enter your GitHub username and password.
-6. If it asks you whether you want to open the project or not, select yes.
-7. You should see your project open. If you need to reopen the project, you should see it under
-   "File > Open Recent"
-8. If you click on the drop-down menu of run configurations, you should see "Main", "TODO", and
-   "TODO" as options. You should be able to run all of them. If any of the configurations are missing,
-   call an instructor over.
+1. Open the assignment link your teacher posts in **Teams** or **OneNote**, and accept the assignment. GitHub will create a private project just for you.
+2. On your new project page, click the green **Code** button, copy the link, and clone the project into IntelliJ (File → New → Project from Version Control, then paste the link).
+3. When IntelliJ asks if you trust the project, say yes / trust it so it can finish setting things up.
+4. If IntelliJ asks you to pick a Java version (JDK), choose **17** or newer.
+5. Use the green play **dropdown** near the top-right of IntelliJ. You should see options like `Main`, `CompanyDirectoryArrayListTests`, `CompanyDirectoryHashMapTests`, `AllTests`, and `CompanyDirectoryBenchmarks`. You can stay in the file you are editing — you do not need to open a different file first.
+
+If anything looks confusing the first time you open the project, ask a teacher — IntelliJ asks a few one-time setup questions, and then day-to-day work is just writing code and using that green play button.
 
 ## Project overview
 
@@ -216,7 +211,15 @@ explain more about how to write benchmarks to ensure you do this correctly.
 
 ## Turning in the project
 
-Follow the guidelines in the IntelliJ Setup page to turn in your assignment.
+At the end of every class period, commit and push your work from IntelliJ:
+
+1. Click **Git > Commit…** (or use the Commit tool window).
+2. Review the changed files. You can double-click a file to see the diff.
+3. Enter a short commit message, then choose **Commit and Push…**.
+4. Confirm the push to your project's `main` branch.
+5. On GitHub, confirm your latest commits are visible.
+
+Pushing to `main` is how you turn in work for this assignment. Autograding runs on those pushes. You can keep improving and pushing after the deadline if your teacher allows late work — ask about any late penalty.
 
 ## Grading rubric
 
