@@ -11,7 +11,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
 
     /**
      * Add a new employee to the directory.
-     * For the HashMap implementation, use the employee's name as the key.
+     * For the HashMap implementation, use the employee's name as the key (put by name).
      * @param employee the employee to add to the directory
      */
     public void addEmployee(Employee employee) {
@@ -21,6 +21,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
 
     /**
      * Find an employee in the directory with a given name.
+     * Use get by name — do not loop.
      * @param employeeName the name of the employee to find
      * @return the employee in the directory with the given name, null if no employee with that name exists
      */
@@ -31,6 +32,7 @@ public class CompanyDirectoryHashMap implements ICompanyDirectory {
 
     /**
      * Find an employee in the directory based on where they work.
+     * Must match both building name and office number. Scan values (O(n) is expected).
      * @param buildingName the name of the building where the employee works
      * @param officeNumber the office number in the building where the employee works
      * @return the employee in the directory with the given office, null if no employee with that office exists

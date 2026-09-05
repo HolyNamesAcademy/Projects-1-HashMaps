@@ -56,8 +56,9 @@ public class CompanyDirectoryArrayListTests {
     // Find an employee that is not in the directory by their name.
     @Test
     public void findEmployeeThatDoesNotExistByName() throws Exception {
-        // TODO: implement this
-        throw new UnsupportedOperationException("Test not yet implemented.");
+        // Arrange: create an empty directory (or add unrelated employees)
+        // Act: findEmployeeByName for a name that was never added
+        // Assert: assertNull(...)
     }
     
     // EXTRA CREDIT: Check that you can correctly update the office location for an employee in the directory.

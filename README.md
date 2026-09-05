@@ -103,6 +103,11 @@ You'll need to implement the following functions in both classes:
 
 **HashMap tip:** In `CompanyDirectoryHashMap`, use the employee's **name** as the HashMap key (see the provided tests that call `getAllEmployees().get(name)`).
 
+- Store with `employees.put(employee.getName(), employee)`.
+- `findEmployeeByName` should use `employees.get(employeeName)` — do **not** loop (that's the point vs ArrayList and why benchmarks differ).
+- `findEmployeeByOffice` must match **both** building name and office number (tests include decoys).
+- `displayAllEmployees` should return one `Employee.toString()` per line (newline-separated). Main already prints the string.
+
 **Find tip:** If no matching employee exists, return `null`.
 
 #### Main
@@ -198,7 +203,7 @@ There is an additional function `updateEmployeeOffice` that you can implement fo
 When implemented, it should allow you to change the office location for an employee already in the directory.
 Do this for both the ArrayList and HashMap directories and complete the corresponding tests.
 
-`Employee` does not have setters. To update an office, create a **new** `Employee` with the same name and the new building/office, then replace the old one in your ArrayList or HashMap.
+`Employee` does not have setters — do not add setters to `Employee`. To update an office, create a **new** `Employee` with the same name and the new building/office, then replace the old one in your ArrayList or HashMap.
 
 ### Read and Write Employee Information to a File
 

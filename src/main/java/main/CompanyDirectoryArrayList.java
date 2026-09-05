@@ -30,6 +30,7 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
 
     /**
      * Find an employee in the directory based on where they work.
+     * Must match both building name and office number.
      * @param buildingName the name of the building where the employee works
      * @param officeNumber the office number in the building where the employee works
      * @return the employee in the directory with the given office, null if no employee with that office exists
