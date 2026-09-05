@@ -101,12 +101,11 @@ You'll need to implement the following functions in both classes:
 | `Employee findEmployeeByOffice(String buildingName, int officeNumber)` | Finds an existing employee in the directory by their office. |
 | `String displayAllEmployees()`                                         | Returns information about all employees (each on its own line). |
 
-**HashMap tip:** In `CompanyDirectoryHashMap`, use the employee's **name** as the HashMap key (see the provided tests that call `getAllEmployees().get(name)`).
+**HashMap tip:** In `CompanyDirectoryHashMap`, the map is keyed by employee **name** (see the provided tests that call `getAllEmployees().get(name)`). Use that key design when you implement add/find — that is what you will compare against the ArrayList version in the benchmarks.
 
-- Store with `employees.put(employee.getName(), employee)`.
-- `findEmployeeByName` should use `employees.get(employeeName)` — do **not** loop (that's the point vs ArrayList and why benchmarks differ).
-- `findEmployeeByOffice` must match **both** building name and office number (tests include decoys).
-- `displayAllEmployees` should return one `Employee.toString()` per line (newline-separated). Main already prints the string.
+**Office tip:** `findEmployeeByOffice` must match **both** building name and office number (tests include decoys with the same office number in a different building).
+
+**Display tip:** `displayAllEmployees` should return one `Employee.toString()` per line (newline-separated). Main already prints the returned string.
 
 **Find tip:** If no matching employee exists, return `null`.
 
@@ -203,7 +202,7 @@ There is an additional function `updateEmployeeOffice` that you can implement fo
 When implemented, it should allow you to change the office location for an employee already in the directory.
 Do this for both the ArrayList and HashMap directories and complete the corresponding tests.
 
-`Employee` does not have setters — do not add setters to `Employee`. To update an office, create a **new** `Employee` with the same name and the new building/office, then replace the old one in your ArrayList or HashMap.
+`Employee` does not have setters for building/office — do not add setters. Figure out how to update the directory entry given that constraint.
 
 ### Read and Write Employee Information to a File
 
