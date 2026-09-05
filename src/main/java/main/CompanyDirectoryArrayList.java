@@ -50,6 +50,7 @@ public class CompanyDirectoryArrayList implements ICompanyDirectory {
 
     /**
      * (EXTRA CREDIT) Updates an employee's office location.
+     * Employee has no setters — create a new Employee with the updated office and replace the old one.
      * @param employeeName The name of the employee to update.
      * @param buildingName The new building name where the employee works.
      * @param officeNumber The new office number in the building where the employee works.

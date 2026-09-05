@@ -99,7 +99,11 @@ You'll need to implement the following functions in both classes:
 | `void addEmployee(Employee employee)`                                  | Adds a new employee to the directory.                        |
 | `Employee findEmployeeByName(String employeeName)`                     | Finds an existing employee in the directory by their name.   |
 | `Employee findEmployeeByOffice(String buildingName, int officeNumber)` | Finds an existing employee in the directory by their office. |
-| `void DisplayAllEmployees()`                                           | Prints information about all employees.                      |
+| `String displayAllEmployees()`                                         | Returns information about all employees (each on its own line). |
+
+**HashMap tip:** In `CompanyDirectoryHashMap`, use the employee's **name** as the HashMap key (see the provided tests that call `getAllEmployees().get(name)`).
+
+**Find tip:** If no matching employee exists, return `null`.
 
 #### Main
 
@@ -194,6 +198,8 @@ There is an additional function `updateEmployeeOffice` that you can implement fo
 When implemented, it should allow you to change the office location for an employee already in the directory.
 Do this for both the ArrayList and HashMap directories and complete the corresponding tests.
 
+`Employee` does not have setters. To update an office, create a **new** `Employee` with the same name and the new building/office, then replace the old one in your ArrayList or HashMap.
+
 ### Read and Write Employee Information to a File
 
 As mentioned previously, employee information is not persisted when the program stops running.
@@ -230,7 +236,7 @@ Pushing to `main` is how you turn in work for this assignment. Autograding runs 
 | `findEmployeeByName()`                      |                    5 pts |
 | `findEmployeeByOffice()`                    |                    5 pts |
 | `displayAllEmployees()`                     |                    5 pts |
-| <h3>CompanyDirectoryArrayHashMap</h3>       |          <h3>20 pts</h3> |
+| <h3>CompanyDirectoryHashMap</h3>            |          <h3>20 pts</h3> |
 | `addEmployee()`                             |                    5 pts |
 | `findEmployeeByName()`                      |                    5 pts |
 | `findEmployeeByOffice()`                    |                    5 pts |
